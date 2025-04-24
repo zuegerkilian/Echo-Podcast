@@ -8,15 +8,14 @@
 body {
   font-family: sans-serif;
   background: #f4f4f4;
-  color: #333;
+  color: #000000;
 }
 .site-header {
-  background-color: #4a3e38; /* dunkelbraun */
-  padding: 10px 0;
+ 
+  padding: 110px 0;
 }
 
 .header-container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
   display: flex;
@@ -24,7 +23,7 @@ body {
   justify-content: space-between;
 }
 .site-header {
-  background-color: #4a3e38;
+  background-color: #544541;
   padding: 10px 0;
   position: sticky;
   top: 0;
@@ -43,7 +42,7 @@ body {
 
 .nav-list li a {
   text-decoration: none;
-  color: #e7ddc4; /* beige */
+  color: #DBCDAF; /* beige */
   font-weight: bold;
   font-size: 1.2rem;
   font-family: sans-serif;
@@ -69,12 +68,12 @@ body {
 }
 
 .hero-logo {
-  width: 250px; /* oder grösser je nach Bedarf */
+  width: 40vw ;/* oder grösser je nach Bedarf */
   height: auto;
 }
 main {
-  background-color: #ececd5; /* leicht grünlich-beiger Hintergrund */
-  padding: 100px 20px;
+  background-color: #DBCDAF; /* leicht grünlich-beiger Hintergrund */
+  padding: 100px 0px;
   font-family: sans-serif;
 }
 
