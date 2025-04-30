@@ -6,22 +6,24 @@
   <title>Wanderpodcast</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  function loadVideo() {
-    const container = document.getElementById('video-container');
-    container.innerHTML = `
-      <iframe 
-        src="https://www.youtube.com/embed/PpC7wmZnnUw?autoplay=1"
-        title="YouTube Video"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
-    `;
-    container.style.display = 'block';
-    document.querySelector('.video-preview').style.display = 'none';
-  }
+<!-- Java für Introvideo -->
+<script> 
+  document.addEventListener("DOMContentLoaded", function() {
+    const container = document.getElementById('videoContainer');
+    const button = document.getElementById('playButton');
+
+    container.addEventListener('click', () => {
+      container.innerHTML = `
+        <iframe src="https://www.youtube.com/embed/Gx543KbuGFY?autoplay=1"
+                title="Pilotfolge"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      `;
+    });
+  });
 </script>
+
+
 <body>
 
   <header class="site-header">
@@ -53,18 +55,13 @@
         Echo ist der Podcast für alle, die gerne draussen unterwegs sind. In jeder Folge nehmen wir dich mit auf eine neue Wanderung – mit spannenden Routen, persönlichen Geschichten und Special Guests. Ob Säntis oder Piz Bernina: Echo begleitet dich Schritt für Schritt.
       </p>
   
-      <div class="audio-player">
-        <div class="video-preview" onclick="loadVideo()">
-          <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 19.57.53.png" alt="Video Vorschau">
-          <div class="play-button">&#9658;</div>
-        </div>
-        
-        <div id="video-container" class="video-wrapper" style="display: none;"></div>
-        <div class="controls">
-          
-          <p>Pilotfolge – 12 Minuten</p>
-        </div>
+      <div class="video-container" id="videoContainer">
+        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 19.57.53.png" alt="Vorschaubild">
+        <div class="play-button" id="playButton"></div>
       </div>
+      <p style="text-align: center; margin-top: 10px;">Pilotfolge – 12 Minuten</p>
+      
+      
     </section>
   
     <!-- Über uns -->
