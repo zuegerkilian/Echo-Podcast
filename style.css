@@ -156,22 +156,64 @@ main {
 
 .team-photos {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
-  margin-top: 30px;
+  justify-content: center;
 }
 
-.team-photos img {
-  flex: 1 1 200px; /* wächst, schrumpft, startet bei 200px */
-  max-width: 250px;
+.team-member {
+  position: relative;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.team-member img {
+  display: block;
+  width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1; /* hält sie quadratisch */
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   transition: transform 0.3s ease;
 }
+
+.team-member:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay auf das ganze Bild */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* gesamtes Bild abdunkeln */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.team-member:hover .overlay {
+  opacity: 1;
+}
+.overlay a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: text-shadow 0.3s ease;
+}
+
+
+
+
+
 
 .team-photos img:hover {
   transform: scale(1.05);
