@@ -1,180 +1,141 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wanderpodcast</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<!-- Java für Introvideo -->
-<script> 
-  document.addEventListener("DOMContentLoaded", function() {
-    const container = document.getElementById('videoContainer');
-    const button = document.getElementById('playButton');
-
-    container.addEventListener('click', () => {
-      container.innerHTML = `
-        <iframe src="https://www.youtube.com/embed/Gx543KbuGFY?autoplay=1"
-                title="Pilotfolge"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-      `;
-    });
-  });
-</script>
-
 
 <body>
-
   <header class="site-header">
     <div class="header-container">
-      <img src="Assets/Logo/logo hell.png" alt="Echo Logo" class="logo">
+      <img src="Assets/Logo/logo hell.png" alt="Echo Logo" class="logo" />
       <nav>
         <ul class="nav-list">
-          <li><a href="#">Start</a></li>
-          <li><a href="#">Über uns</a></li>
-          <li><a href="#">Episoden</a></li>
-          <li><a href="#">Kontakt</a></li>
+          <li><a href="#start">Start</a></li>
+          <li><a href="#ueberuns">Über uns</a></li>
+          <li><a href="#episoden">Episoden</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  
-  <section class="hero">
+
+  <section class="hero" id="start">
     <div class="hero-overlay">
-      <img src="Assets/Logo/logo hell.png" alt="Echo Logo" class="hero-logo">
+      <img src="Assets/Logo/logo hell.png" alt="Echo Logo" class="hero-logo" />
     </div>
   </section>
 
   <main>
-    <!-- Willkommen -->
-    <section class="intro">
+    <section>
       <h2>Willkommen zu ECHO</h2>
       <h3>Der Vodcast zwischen Gipfeln und Gedanken</h3>
-      <p>
-        Echo ist der Podcast für alle, die gerne draussen unterwegs sind. In jeder Folge nehmen wir dich mit auf eine neue Wanderung – mit spannenden Routen, persönlichen Geschichten und Special Guests. Ob Säntis oder Piz Bernina: Echo begleitet dich Schritt für Schritt.
-      </p>
-  
+      <p>Echo ist der Podcast für alle, die gerne draussen unterwegs sind. In jeder Folge nehmen wir dich mit auf eine neue Wanderung – mit spannenden Routen, persönlichen Geschichten und Special Guests. Ob Säntis oder Piz Bernina: Echo begleitet dich Schritt für Schritt.</p>
       <div class="video-container" id="videoContainer">
-        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 19.57.53.png" alt="Vorschaubild">
+        <img src="Assets/Bilder_Episode/Thumbnail_Pilotfolge.png" alt="Vorschaubild" />
         <div class="play-button" id="playButton"></div>
       </div>
-      <p style="text-align: center; margin-top: 10px;">Pilotfolge – 12 Minuten</p>
-      
-      
+      <p style="margin-top: 10px;">Pilotfolge – 12 Minuten</p>
     </section>
-  
-    <!-- Über uns -->
-    <section class="about">
-      <h3><span class="icon">👣</span> Über uns</h3>
-      <p>
-        Hinter Echo stehen wir – <strong>Kilian Züger</strong> , <strong> Jessi Fisher</strong> und <strong>Andrin Zünd</strong>, drei Studierende im Bachelorstudiengang Multimedia Production an der Fachhochschule Graubünden.
-      </p>
-      <p>
-        Was als Projekt für die Plattform Digezz begann, entwickelte sich schnell zu mehr als nur ein Semesterziel: Echo wurde zu unserem Versuch, das Wandern, die Ruhe und die Natur mit moderner Medienproduktion zu verbinden.
-      </p>
+
+    <section id="ueberuns">
+      <h2><span class="icon">👣</span> Über uns</h2>
+      <p>Hinter Echo stehen wir – <strong>Kilian Züger</strong>, <strong>Jessi Fisher</strong> und <strong>Andrin Zünd</strong>, drei Studierende im Bachelorstudiengang Multimedia Production an der Fachhochschule Graubünden.</p>
+      <p>Was als Projekt für die Plattform Digezz begann, entwickelte sich schnell zu mehr als nur ein Semesterziel: Echo wurde zu unserem Versuch, das Wandern, die Ruhe und die Natur mit moderner Medienproduktion zu verbinden.</p>
+
       <div class="team-photos">
         <div class="team-member">
-          <img src="Assets/Bilder_Personen/Bildschirmfoto 2025-04-23 um 19.58.23.png" alt="Andrin">
-          <div class="overlay">
-            <a href="https://dein-link-zu-andrin.ch">Andrin Zünd</a>
-          </div>
+          <img src="Assets/Bilder_Personen/Bildschirmfoto 2025-04-23 um 19.58.23.png" alt="Andrin" />
+          <div class="overlay"><a href="https://dein-link-zu-andrin.ch">Andrin Zünd</a></div>
         </div>
         <div class="team-member">
-          <img src="Assets/Bilder_Personen/Bildschirmfoto 2025-04-23 um 19.58.32.png" alt="Jessi">
-          <div class="overlay">
-            <a href="https://dein-link-zu-jessi.ch">Jessi Fisher</a>
-          </div>
+          <img src="Assets/Bilder_Personen/Bildschirmfoto 2025-04-23 um 19.58.32.png" alt="Jessi" />
+          <div class="overlay"><a href="https://dein-link-zu-jessi.ch">Jessi Fisher</a></div>
         </div>
         <div class="team-member">
-          <img src="Assets/Bilder_Personen/Bildschirmfoto 2025-04-23 um 19.58.42.png" alt="Kilian">
-          <div class="overlay">
-            <a href="https://dein-link-zu-kilian.ch">Kilian Züger</a>
-          </div>
+          <img src="Assets/Bilder_Personen/Bildschirmfoto 2025-04-23 um 19.58.42.png" alt="Kilian" />
+          <div class="overlay"><a href="https://dein-link-zu-kilian.ch">Kilian Züger</a></div>
         </div>
-      </div>
-      
-      
-    </section>
-  
-    <!-- Unsere Grundidee -->
-    <section class="idea">
-      <h3>Unsere Grundidee?</h3>
-      <p>
-        Raus aus dem Bildschirm – rein in die Berge. Wir wollten einen Podcast schaffen, der zum Innehalten einlädt. Der die Geräusche der Natur hörbar macht und Menschen motiviert, die eigenen vier Wände gegen Waldwege, Bergpfade und Panoramablicke einzutauschen.
-      </p>
-      <p>
-        Mit Echo nehmen wir euch mit auf echte Wanderungen – mal auf bekannten Routen, mal auf versteckten Pfaden. Wir erzählen von unseren Erlebnissen unterwegs und lassen auch mal die Natur selbst zu Wort kommen – ob durch Vogelstimmen oder Windböen.
-      </p>
-    </section>
-    <section class="episodes">
-      <div class="episodes-header">
-        <img src="Assets/Bilder_Icons/Bildschirmfoto 2025-04-23 um 20.23.54.png" alt="Kopfhörer" class="episode-icon">
-        <h2>Episoden</h2>
-        <p>
-          Finde hier alle Folgen von Echo<br>
-          – deinem akustischen Begleiter fürs Wandern.
-        </p>
-      </div>
-    
-      <div class="cover-image">
-        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 19.57.53.png" alt="Wanderer am See">
-      </div>
-    
-      <div class="episode-thumbs">
-        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.20.40.png" alt="Episode 1">
-        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.20.47.png" alt="Episode 2">
-        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.20.56.png" alt="Episode 3">
-        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.21.02.png" alt="Episode 4">
-        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.20.47.png" alt="Episode 5">
       </div>
     </section>
 
-    <section class="contact">
+    <section class="idea">
+      <h2>Unsere Grundidee?</h2>
+      <p>Raus aus dem Bildschirm – rein in die Berge. Wir wollten einen Podcast schaffen, der zum Innehalten einlädt. Der die Geräusche der Natur hörbar macht und Menschen motiviert, die eigenen vier Wände gegen Waldwege, Bergpfade und Panoramablicke einzutauschen.</p>
+      <p>Mit Echo nehmen wir euch mit auf echte Wanderungen – mal auf bekannten Routen, mal auf versteckten Pfaden. Wir erzählen von unseren Erlebnissen unterwegs und lassen auch mal die Natur selbst zu Wort kommen – ob durch Vogelstimmen oder Windböen.</p>
+    </section>
+
+    <section class="episodes" id="episoden">
+      <div class="episodes-header">
+        <img src="Assets/Bilder_Icons/Bildschirmfoto 2025-04-23 um 20.23.54.png" alt="Kopfhörer" class="episode-icon" />
+        <h2>Episoden</h2>
+        <p>Finde hier alle Folgen von Echo<br />– deinem akustischen Begleiter fürs Wandern.</p>
+      </div>
+
+      <div class="cover-image">
+        <img src="Assets/Bilder_Episode/Thumbnail_Pilotfolge.png" alt="Wanderer am See" />
+      </div>
+
+      <div class="episode-thumbs">
+        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.20.40.png" alt="Episode 1" />
+        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.20.47.png" alt="Episode 2" />
+        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.20.56.png" alt="Episode 3" />
+        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.21.02.png" alt="Episode 4" />
+        <img src="Assets/Bilder_Episode/Bildschirmfoto 2025-04-23 um 20.20.47.png" alt="Episode 5" />
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt">
       <div class="contact-header">
-        <img src="Assets/Bilder_Icons/Bildschirmfoto 2025-04-23 um 20.27.20.png" alt="Telefon" class="contact-icon">
+        <img src="Assets/Bilder_Icons/Bildschirmfoto 2025-04-23 um 20.27.20.png" alt="Telefon" class="contact-icon" />
         <h2>Kontakt</h2>
       </div>
-    
+
       <div class="map">
-        <img src="Assets/Bild_Standort/Bildschirmfoto 2025-04-23 um 20.27.32.png" alt="Standortkarte Echo">
+        <img src="Assets/Bild_Standort/Bildschirmfoto 2025-04-23 um 20.27.32.png" alt="Standortkarte Echo" />
       </div>
-    
+
       <div class="contact-info">
-        <p><strong>📍 Alpsteinweg 2<br>7000 Chur</strong></p>
-        <p><a href="tel:+41234567890">+41 23 456 78 90</a><br>
-           <a href="mailto:echo@wanderpodcast.ch">echo@wanderpodcast.ch</a></p>
-        <p class="message">Nimm jetzt Kontakt mit uns auf<br>
-           – wir freuen uns auf deine Nachricht.</p>
+        <p><strong>📍 Alpsteinweg 2<br />7000 Chur</strong></p>
+        <p>
+          <a href="tel:+41234567890">+41 23 456 78 90</a><br />
+          <a href="mailto:echo@wanderpodcast.ch">echo@wanderpodcast.ch</a>
+        </p>
+        <p class="message">Nimm jetzt Kontakt mit uns auf<br />– wir freuen uns auf deine Nachricht.</p>
       </div>
     </section>
-    
   </main>
-
-
-  
-
 
   <footer class="site-footer">
     <div class="footer-logo">
       <h2>Echo</h2>
-      <img src="Assets/Logo/logo hell.png" alt="Echo Logo klein">
+      <img src="Assets/Logo/logo hell.png" alt="Echo Logo klein" />
     </div>
-  
+
     <div class="social-media">
       <span>Folge uns:</span>
-      <a href="#"><img src="Assets/Bilder_Icons/Instagram.png" alt="Instagram"></a>
-      <a href="https://www.youtube.com/@Echo_youtube_MMP"><img src="Assets/Bilder_Icons/Youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="Assets/Bilder_Icons/Instagram.png" alt="Instagram" /></a>
+      <a href="https://www.youtube.com/@Echo_youtube_MMP"><img src="Assets/Bilder_Icons/Youtube.png" alt="YouTube" /></a>
     </div>
-  
+
     <div class="footer-links">
       <p>
-        &copy; 2025 [ECHO]. Alle Rechte vorbehalten. |
+        &copy; 2025 ECHO. Alle Rechte vorbehalten. |
         <a href="#">Datenschutz</a> |
         <a href="#">Impressum</a>
       </p>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

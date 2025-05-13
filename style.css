@@ -1,30 +1,54 @@
-
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* === BASISLAYOUT === */
 body {
-  font-family: sans-serif;
+  font-family: 'Bricolage Grotesque', sans-serif;
   background: #f4f4f4;
-  color: #000000;
+  color: #000;
+  text-align: center;
 }
 
-
-.header-container {
-  margin: 0 auto;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+p {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* === HEADER === */
 .site-header {
   background-color: #544541;
   padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -35,70 +59,64 @@ body {
   list-style: none;
   display: flex;
   gap: 60px;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .nav-list li a {
   text-decoration: none;
-  color: #DBCDAF; /* beige */
+  color: #DBCDAF;
   font-weight: bold;
-  font-size: 1.2rem;
-  font-family: sans-serif;
+  font-size: 1.6rem;
 }
 
 .nav-list li a:hover {
   text-decoration: underline;
 }
+
+/* === HERO-SLIDESHOW === */
 .hero {
   position: relative;
-  background-image: url('Assets/Bild_hero/Bildschirmfoto\ 2025-04-23\ um\ 19.40.48.png'); /* Hintergrundbild */
-  background-size: cover;
-  background-position: center;
-  height: 700px; /* Höhe je nach Bild anpassen */
+  height: 800px;
+  overflow: hidden;
 }
 
-.hero-overlay {
+.hero-bg,
+.bg1,
+.bg2 {
   position: absolute;
-  inset: 0;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: center / cover no-repeat;
+  transition: opacity 2s ease-in-out;
+  z-index: 0;
+}
+
+.bg2 { opacity: 0; }
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .hero-logo {
-  width: 40vw ;/* oder grösser je nach Bedarf */
+  width: 40vw;
+  min-width: 500px;
   height: auto;
 }
+
+/* === MAIN === */
 main {
-  background-color: #DBCDAF; /* leicht grünlich-beiger Hintergrund */
-  padding: 100px 0px;
-  font-family: sans-serif;
+  background-color: #DBCDAF;
+  padding: 100px 0;
 }
 
-.intro {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-}
-
-.intro h2 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  margin-bottom: 10px;
-}
-
-.intro h3 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: #333;
-  margin-bottom: 30px;
-}
-
-.intro p {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
-
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-/* Video Preview */
+/* === VIDEO === */
 .video-container {
   max-width: 800px;
   aspect-ratio: 16 / 9;
@@ -110,18 +128,13 @@ main {
   cursor: pointer;
 }
 
-.video-container img {
+.video-container img,
+.video-container iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.video-container iframe {
-  width: 100%;
-  height: 100%;
   border: none;
-  display: block;
 }
 
 .play-button {
@@ -136,8 +149,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.3s;
   z-index: 2;
+  transition: background 0.3s;
 }
 
 .play-button::before {
@@ -151,13 +164,13 @@ main {
 .play-button:hover {
   background: rgba(0, 0, 0, 0.8);
 }
-/* Video Preview */
 
-
+/* === TEAM === */
 .team-photos {
   display: flex;
   gap: 20px;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .team-member {
@@ -168,9 +181,7 @@ main {
 }
 
 .team-member img {
-  display: block;
   width: 100%;
-  height: auto;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -179,14 +190,11 @@ main {
   transform: scale(1.05);
 }
 
-/* Overlay auf das ganze Bild */
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* gesamtes Bild abdunkeln */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   display: flex;
   justify-content: center;
@@ -202,6 +210,7 @@ main {
 .team-member:hover .overlay {
   opacity: 1;
 }
+
 .overlay a {
   color: white;
   text-decoration: none;
@@ -210,44 +219,15 @@ main {
   transition: text-shadow 0.3s ease;
 }
 
-
-
-
-
-
-.team-photos img:hover {
-  transform: scale(1.05);
-}
-.about, .idea {
-  max-width: 1200px;
-  margin: 0 auto 80px;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.about h3, .idea h3 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.about p, .idea p {
-  font-size: clamp(1rem, 1.5vw, 1.4rem);
-
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
+/* === EPISODEN === */
 .episodes {
   background-color: #4a3e38;
   color: white;
   padding: 80px 20px;
-  text-align: center;
 }
 
 .episodes-header {
-  max-width: 12o0px;
+  max-width: 1200px;
   margin: 0 auto 40px;
 }
 
@@ -256,27 +236,18 @@ main {
   margin-bottom: 10px;
 }
 
-.episodes h2 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  margin-bottom: 10px;
-}
-
-.episodes p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
 .cover-image img {
   width: 100%;
-  max-width: 850px;
+  max-width: 750px;
   margin: 40px auto;
   display: block;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s;;
+  transition: transform 0.3s;
 }
+
 .cover-image img:hover {
-   transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .episode-thumbs {
@@ -299,25 +270,15 @@ main {
   transform: scale(1.05);
 }
 
+/* === KONTAKT === */
 .contact {
   background-color: #d5c8a4;
-  text-align: center;
   padding: 80px 20px;
-  font-family: sans-serif;
   color: #222;
-}
-
-.contact-header {
-  margin-bottom: 30px;
 }
 
 .contact-icon {
   width: 40px;
-  margin-bottom: 10px;
-}
-
-.contact h2 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
   margin-bottom: 10px;
 }
 
@@ -345,19 +306,7 @@ main {
   font-weight: 500;
 }
 
-
-.buttons span {
-  font-size: 2rem;
-  margin: 0 15px;
-  cursor: pointer;
-}
-
-.controls p {
-  margin-top: 10px;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
+/* === FOOTER === */
 .site-footer {
   background-color: #4a3e38;
   color: #e7ddc4;
@@ -377,7 +326,6 @@ main {
 .footer-logo h2 {
   font-size: 1.8rem;
   font-weight: bold;
-  margin: 0;
 }
 
 .footer-logo img {
@@ -403,8 +351,20 @@ main {
 .social-media a img:hover {
   transform: scale(1.2);
 }
+
 .footer-links a {
   color: #e7ddc4;
   text-decoration: underline;
   margin: 0 5px;
 }
+main {
+  padding: 100px 20px; /* vorher war wahrscheinlich 100px 0 */
+}
+h2, h3, p {
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+
