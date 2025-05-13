@@ -62,3 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.getElementById("burger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    burger.addEventListener("click", function () {
+      mobileNav.classList.toggle("open");
+    });
+  });
+

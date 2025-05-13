@@ -18,6 +18,7 @@ h2 {
   font-size: clamp(3rem, 5vw, 5.5rem);
   letter-spacing: 1px;
   margin-bottom: 10px;
+
 }
 
 h3 {
@@ -31,7 +32,12 @@ p {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.6;
   margin-bottom: 40px;
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: 20px;
 }
+
 
 /* === HEADER === */
 .site-header {
@@ -78,6 +84,7 @@ p {
   position: relative;
   height: 800px;
   overflow: hidden;
+ 
 }
 
 .hero-bg,
@@ -90,6 +97,7 @@ p {
   background: center / cover no-repeat;
   transition: opacity 2s ease-in-out;
   z-index: 0;
+  
 }
 
 .bg2 { opacity: 0; }
@@ -102,6 +110,7 @@ p {
   align-items: center;
   justify-content: center;
   height: 100%;
+  
 }
 
 .hero-logo {
@@ -113,7 +122,8 @@ p {
 /* === MAIN === */
 main {
   background-color: #DBCDAF;
-  padding: 100px 0;
+  padding: 20px 0px;
+  
 }
 
 /* === VIDEO === */
@@ -326,10 +336,12 @@ main {
 .footer-logo h2 {
   font-size: 1.8rem;
   font-weight: bold;
+  
 }
 
 .footer-logo img {
   height: 30px;
+  margin-bottom: 8px;
 }
 
 .social-media {
@@ -357,14 +369,145 @@ main {
   text-decoration: underline;
   margin: 0 5px;
 }
-main {
-  padding: 100px 20px; /* vorher war wahrscheinlich 100px 0 */
-}
-h2, h3, p {
-  width: 100%;
-  max-width: 900px;
-  margin-inline: auto;
-  padding-inline: 20px;
+
+@media (max-width: 768px) {
+
+  /* === HEADER === */
+  .site-header {
+    padding: 20px 0;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* weiter auseinander */
+  }
+  
+
+  .nav-list li a {
+    font-size: 1.2rem;
+  }
+
+  /* === HERO === */
+  .hero {
+    height: 500px;
+    margin-top: 0;
+  }
+
+  .hero-logo {
+    width: 80vw;
+    min-width: unset;
+  }
+
+  /* === TEXT UND TITEL === */
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  /* === VIDEO === */
+  .video-container {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  /* === TEAM === */
+  .team-photos {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 60%;
+    max-width: 250px;
+  }
+
+  .team-member img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* === EPISODEN === */
+  .episodes {
+    padding: 60px 10px;
+  }
+
+  .episode-thumbs {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .episode-thumbs img {
+    width: 90px;
+  }
+
+  .cover-image img {
+    margin: 20px auto;
+  }
+
+  /* === KONTAKT === */
+  .contact {
+    padding: 60px 15px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .map img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+
+  /* === FOOTER === */
+  .footer-logo {
+  
+    gap: 6px;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.3rem;
+  }
+
+  .footer-logo img {
+    height: 24px;
+    margin-bottom: 6px;
+  }
+
+  .footer-links p {
+    font-size: 0.8rem;
+    padding: 0 10px;
+  }
+
+  .social-media {
+    margin-bottom: 15px;
+  }
+
+  .social-media a img {
+    height: 20px;
+  }
 }
 
 
