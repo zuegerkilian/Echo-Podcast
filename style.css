@@ -123,6 +123,7 @@ p {
 main {
   background-color: #DBCDAF;
   padding: 20px 0px;
+  padding-bottom: 0px;
   
 }
 
@@ -231,7 +232,7 @@ main {
 
 /* === EPISODEN === */
 .episodes {
-  background-color: #4a3e38;
+  background-color: greenyellow;
   color: white;
   padding: 80px 20px;
 }
@@ -278,42 +279,6 @@ main {
 
 .episode-thumbs img:hover {
   transform: scale(1.05);
-}
-
-/* === KONTAKT === */
-.contact {
-  background-color: #d5c8a4;
-  padding: 80px 20px;
-  color: #222;
-}
-
-.contact-icon {
-  width: 40px;
-  margin-bottom: 10px;
-}
-
-.map img {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 8px;
-  margin: 20px auto;
-  display: block;
-}
-
-.contact-info {
-  margin-top: 30px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.contact-info a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.contact-info .message {
-  margin-top: 20px;
-  font-weight: 500;
 }
 
 /* === FOOTER === */
@@ -369,6 +334,10 @@ main {
   text-decoration: underline;
   margin: 0 5px;
 }
+.email{
+    margin-bottom: 15px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
 
 @media (max-width: 768px) {
 
@@ -465,22 +434,6 @@ main {
   .cover-image img {
     margin: 20px auto;
   }
-
-  /* === KONTAKT === */
-  .contact {
-    padding: 60px 15px;
-  }
-
-  .contact-info {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .map img {
-    max-width: 100%;
-    border-radius: 6px;
-  }
-
   /* === FOOTER === */
   .footer-logo {
   
@@ -508,6 +461,7 @@ main {
   .social-media a img {
     height: 20px;
   }
+  
 }
 
 
