@@ -18,12 +18,13 @@ h2 {
   font-size: clamp(3rem, 5vw, 5.5rem);
   letter-spacing: 1px;
   margin-bottom: 10px;
+  color: #333333;
 
 }
 
 h3 {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: #333;
+  color: #333333;
   margin-bottom: 30px;
   font-weight: 600;
 }
@@ -51,7 +52,7 @@ p {
 .header-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -232,9 +233,9 @@ main {
 
 /* === EPISODEN === */
 .episodes {
-  background-color: greenyellow;
-  color: white;
-  padding: 80px 20px;
+  background-color: #dbcdaf;
+  color: black;
+  padding-bottom: 80px;
 }
 
 .episodes-header {
@@ -295,7 +296,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .footer-logo h2 {
@@ -310,7 +311,7 @@ main {
 }
 
 .social-media {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .social-media span {
@@ -334,9 +335,35 @@ main {
   text-decoration: underline;
   margin: 0 5px;
 }
-.email{
-    margin-bottom: 15px;
+.email a{
+    
     font-family: 'Bricolage Grotesque', sans-serif;
+    color: #e7ddc4;
+    
+  }
+  .email{
+  margin-bottom: 15px;
+}
+.email-datenschutz a{
+    
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: #333333;
+    
+  }
+  .email-datenschutz{
+  margin-bottom: 15px;
+}
+  .echofooter{
+    color: #e7ddc4;
+  }
+  .datenschutz h2{
+    margin-bottom: 30px;
+    
+
+  }
+  .stand-datenschutz {
+    padding: 10px;
+    margin: 0px;
   }
 
 @media (max-width: 768px) {
@@ -419,7 +446,8 @@ main {
 
   /* === EPISODEN === */
   .episodes {
-    padding: 60px 10px;
+    padding: 0px 10px;
+    padding-bottom: 60px;
   }
 
   .episode-thumbs {
