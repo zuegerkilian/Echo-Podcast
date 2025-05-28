@@ -125,6 +125,7 @@ main {
   background-color: #DBCDAF;
   padding: 20px 0px;
   padding-bottom: 0px;
+  padding-top: 30px;
   
 }
 
@@ -138,6 +139,7 @@ main {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   cursor: pointer;
+  
 }
 
 .video-container img,
@@ -147,6 +149,7 @@ main {
   object-fit: cover;
   display: block;
   border: none;
+  
 }
 
 .play-button {
@@ -287,7 +290,7 @@ main {
   background-color: #4a3e38;
   color: #e7ddc4;
   text-align: center;
-  padding: 40px 20px;
+  padding: 40px 20px 2px;
   font-size: 0.95rem;
 }
 
@@ -381,24 +384,25 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
   }
 
   .nav-list {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* weiter auseinander */
+    gap: 20vw; /* weiter auseinander */
   }
   
 
   .nav-list li a {
-    font-size: 1.2rem;
+    font-size: 5vw;
+    
   }
 
   /* === HERO === */
   .hero {
-    height: 500px;
+    height: 400px;
     margin-top: 0;
   }
 
@@ -414,6 +418,8 @@ main {
 
   h3 {
     font-size: 1.2rem;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   p {
@@ -428,21 +434,61 @@ main {
   }
 
   /* === TEAM === */
-  .team-photos {
+ 
+ .team-photos {
+    display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    margin-bottom: 40px;
   }
 
-  .team-member {
-    width: 60%;
-    max-width: 250px;
+  /* 2. Jedes Team-Member als Column-Container: Bild oben, Text unten */
+  .team-member { 
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
   }
 
+  /* 3. Bild auf mobile-freundliche Breite skalieren */
   .team-member img {
-    width: 100%;
+  
     height: auto;
+    border-radius: 8px;
   }
+
+  /* 4. Name ganz einfach als Text unter dem Bild */
+  .team-member .overlay {
+    position: static;     /* kein Overlay mehr */
+    margin-top: 6px;      /* Abstand Bild ↔ Name */
+    background: none;     /* kein Hintergrund */
+    padding: 0;
+   
+    font-size: 3vw;
+    font-weight: 600;
+    color: #333;          /* dunkle Textfarbe */
+    text-align: center;
+    white-space: nowrap;  /* verhindert Umbruch */
+  }
+    .team-member .overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: static;      /* ganz normal im Fluss, unter dem Bild */
+    margin-top: 6px;       /* Abstand Bild ↔ Text */
+    
+  }
+  .overlay a {
+    color:#333333
+  }
+   
+
+  /* Hover/Active-Transform überschreiben */
+  .team-member:hover img,
+  .team-member:active img {
+    transform: none !important;
+  }
+
+
 
   /* === EPISODEN === */
   .episodes {
